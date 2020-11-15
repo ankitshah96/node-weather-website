@@ -8,7 +8,7 @@ const error=chalk.red.bold.underline;
 const info = chalk.blue;
 
 let params = {
-  access_key: process_env.WeatherStackAccessKey,
+  access_key: process.env.WeatherStackAccessKey,
   query: 'Mumbai',
   units: 'm'
 }

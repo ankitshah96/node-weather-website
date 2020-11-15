@@ -1,14 +1,14 @@
 const request = require('request')
 const axios = require('axios').default;
 const chalk = require('chalk');
-const constants = require('./constants')
+
 
 const success=chalk.green;
 const error=chalk.red.bold.underline;
 const info = chalk.blue;
 
 let params = {
-  access_key: constants.WeatherStackAccessKey,
+  access_key: process_env.WeatherStackAccessKey,
   query: 'Mumbai',
   units: 'm'
 }

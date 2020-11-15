@@ -3,6 +3,7 @@ const express = require('express')
 const hbs = require('hbs')
 
 const forecast = require('./utils/forecast')
+const port = process.env.PORT || 3000
 
 const app = express()
 
@@ -96,7 +97,7 @@ app.get('*', (req, res) => {
     })
 })
 
-const server = app.listen(3001, () => console.log('Server Ready!'))
+const server = app.listen(port, () => console.log('Server Ready running on port: '+port))
 
 process.on('SIGTERM', ()=>{
     server.close(() => {
